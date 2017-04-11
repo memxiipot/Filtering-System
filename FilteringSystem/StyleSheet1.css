@@ -1,0 +1,19 @@
+﻿
+
+.myHoverButton2
+{
+    background-color:#1A6F20;
+    -webkit-border-radius: 7px;
+    -webkit-transition-duration: 0.5s;
+    margin-bottom: 0px;
+    color:white;
+}
+.myHoverButton2:hover
+{ 
+    background-color: #00AF0C; 
+    -webkit-transform:scale(2:2);
+    transform: scale(2:2);
+    color:white;
+}
+
+

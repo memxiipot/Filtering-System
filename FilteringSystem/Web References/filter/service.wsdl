@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.benilde.edu.ph/pp/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.benilde.edu.ph/pp/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.benilde.edu.ph/pp/">
+      <s:element name="GetEmp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="key" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmpResult" type="tns:ArrayOfEmpEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEmpEntity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EmpEntity" nillable="true" type="tns:EmpEntity" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EmpEntity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Idno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Location" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Pdeptcode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cdeptcode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Deptcode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Infonet" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetBatch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="batch" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBatchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBatchResult" type="tns:ArrayOfBatchEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfBatchEntity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BatchEntity" nillable="true" type="tns:BatchEntity" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BatchEntity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Batch" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Idno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Citizenship" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Gender" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Birthdate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Religion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Studtypein" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Syin" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Termin" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Studtypeout" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Syout" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Termout" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nostreet" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CityProv" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Region" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zipcode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Degree" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="School" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetStud">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sy" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="term" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStudResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStudResult" type="tns:ArrayOfStudEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfStudEntity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="StudEntity" nillable="true" type="tns:StudEntity" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="StudEntity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Idno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Term" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Degree" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="School" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetUserType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserTypeResult" type="tns:ArrayOfUserTypeEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfUserTypeEntity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="UserTypeEntity" nillable="true" type="tns:UserTypeEntity" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UserTypeEntity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Group" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubGroup" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ArrayOfEmpEntity" nillable="true" type="tns:ArrayOfEmpEntity" />
+      <s:element name="ArrayOfBatchEntity" nillable="true" type="tns:ArrayOfBatchEntity" />
+      <s:element name="ArrayOfStudEntity" nillable="true" type="tns:ArrayOfStudEntity" />
+      <s:element name="ArrayOfUserTypeEntity" nillable="true" type="tns:ArrayOfUserTypeEntity" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetEmpSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmp" />
+  </wsdl:message>
+  <wsdl:message name="GetEmpSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmpResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBatchSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBatch" />
+  </wsdl:message>
+  <wsdl:message name="GetBatchSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStudSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStud" />
+  </wsdl:message>
+  <wsdl:message name="GetStudSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStudResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserType" />
+  </wsdl:message>
+  <wsdl:message name="GetUserTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmpHttpGetIn">
+    <wsdl:part name="key" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEmpHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfEmpEntity" />
+  </wsdl:message>
+  <wsdl:message name="GetBatchHttpGetIn">
+    <wsdl:part name="key" type="s:string" />
+    <wsdl:part name="batch" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBatchHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfBatchEntity" />
+  </wsdl:message>
+  <wsdl:message name="GetStudHttpGetIn">
+    <wsdl:part name="key" type="s:string" />
+    <wsdl:part name="sy" type="s:string" />
+    <wsdl:part name="term" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStudHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfStudEntity" />
+  </wsdl:message>
+  <wsdl:message name="GetUserTypeHttpGetIn">
+    <wsdl:part name="key" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+    <wsdl:part name="pass" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserTypeHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfUserTypeEntity" />
+  </wsdl:message>
+  <wsdl:message name="GetEmpHttpPostIn">
+    <wsdl:part name="key" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEmpHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfEmpEntity" />
+  </wsdl:message>
+  <wsdl:message name="GetBatchHttpPostIn">
+    <wsdl:part name="key" type="s:string" />
+    <wsdl:part name="batch" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBatchHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfBatchEntity" />
+  </wsdl:message>
+  <wsdl:message name="GetStudHttpPostIn">
+    <wsdl:part name="key" type="s:string" />
+    <wsdl:part name="sy" type="s:string" />
+    <wsdl:part name="term" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStudHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfStudEntity" />
+  </wsdl:message>
+  <wsdl:message name="GetUserTypeHttpPostIn">
+    <wsdl:part name="key" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+    <wsdl:part name="pass" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserTypeHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfUserTypeEntity" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="GetEmp">
+      <wsdl:input message="tns:GetEmpSoapIn" />
+      <wsdl:output message="tns:GetEmpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBatch">
+      <wsdl:input message="tns:GetBatchSoapIn" />
+      <wsdl:output message="tns:GetBatchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStud">
+      <wsdl:input message="tns:GetStudSoapIn" />
+      <wsdl:output message="tns:GetStudSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserType">
+      <wsdl:input message="tns:GetUserTypeSoapIn" />
+      <wsdl:output message="tns:GetUserTypeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServiceHttpGet">
+    <wsdl:operation name="GetEmp">
+      <wsdl:input message="tns:GetEmpHttpGetIn" />
+      <wsdl:output message="tns:GetEmpHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBatch">
+      <wsdl:input message="tns:GetBatchHttpGetIn" />
+      <wsdl:output message="tns:GetBatchHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStud">
+      <wsdl:input message="tns:GetStudHttpGetIn" />
+      <wsdl:output message="tns:GetStudHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserType">
+      <wsdl:input message="tns:GetUserTypeHttpGetIn" />
+      <wsdl:output message="tns:GetUserTypeHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServiceHttpPost">
+    <wsdl:operation name="GetEmp">
+      <wsdl:input message="tns:GetEmpHttpPostIn" />
+      <wsdl:output message="tns:GetEmpHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBatch">
+      <wsdl:input message="tns:GetBatchHttpPostIn" />
+      <wsdl:output message="tns:GetBatchHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStud">
+      <wsdl:input message="tns:GetStudHttpPostIn" />
+      <wsdl:output message="tns:GetStudHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserType">
+      <wsdl:input message="tns:GetUserTypeHttpPostIn" />
+      <wsdl:output message="tns:GetUserTypeHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetEmp">
+      <soap:operation soapAction="http://www.benilde.edu.ph/pp/GetEmp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBatch">
+      <soap:operation soapAction="http://www.benilde.edu.ph/pp/GetBatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStud">
+      <soap:operation soapAction="http://www.benilde.edu.ph/pp/GetStud" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserType">
+      <soap:operation soapAction="http://www.benilde.edu.ph/pp/GetUserType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetEmp">
+      <soap12:operation soapAction="http://www.benilde.edu.ph/pp/GetEmp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBatch">
+      <soap12:operation soapAction="http://www.benilde.edu.ph/pp/GetBatch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStud">
+      <soap12:operation soapAction="http://www.benilde.edu.ph/pp/GetStud" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserType">
+      <soap12:operation soapAction="http://www.benilde.edu.ph/pp/GetUserType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceHttpGet" type="tns:ServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetEmp">
+      <http:operation location="/GetEmp" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBatch">
+      <http:operation location="/GetBatch" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStud">
+      <http:operation location="/GetStud" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserType">
+      <http:operation location="/GetUserType" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceHttpPost" type="tns:ServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetEmp">
+      <http:operation location="/GetEmp" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBatch">
+      <http:operation location="/GetBatch" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStud">
+      <http:operation location="/GetStud" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserType">
+      <http:operation location="/GetUserType" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://www.benilde.edu.ph/pp/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://www.benilde.edu.ph/pp/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceHttpGet" binding="tns:ServiceHttpGet">
+      <http:address location="http://www.benilde.edu.ph/pp/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceHttpPost" binding="tns:ServiceHttpPost">
+      <http:address location="http://www.benilde.edu.ph/pp/service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

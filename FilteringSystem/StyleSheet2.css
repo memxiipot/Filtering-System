@@ -1,0 +1,45 @@
+﻿.main
+{
+    background-color:#06BF34;
+    -webkit-border-radius:10px;
+    -webkit-transition-duration:0.75s;
+    color:#333333;
+    border-style:solid;
+    border-width:4px;
+    border-color: #0E7F2B;
+
+}
+.main:hover, main:active
+{
+    -webkit-border-radius:100px;
+    background-color:#4FA665;
+    color: White;
+    -webkit-transform:scale(2:2);
+    transform: scale(2:2);
+    border-style: solid;
+    border-width: 4px;
+    border-color: #84FCA2;
+}
+
+.buttonho
+{
+     background-color:#06BF34;
+     -webkit-border-radius:10px;
+     -webkit-transition-duration: 0.75s;
+     color:#333333;
+     border-style: solid;
+     border-width: 4px;
+     border-color: #0E7F2B;
+
+}
+.buttonho:hover, buttonho:active
+{
+    -webkit-border-radius:100px;
+    background-color:#4FA665;
+    color: White;
+    -webkit-transform:scale(2:2);
+    transform: scale(2:2);
+    border-style: solid;
+    border-width: 4px;
+    border-color: #84FCA2;
+}
